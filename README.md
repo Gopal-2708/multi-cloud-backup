@@ -21,19 +21,6 @@ A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azur
 
 ---
 
-## 🖼️ Screenshots
-
-| 🔵 Azure Upload | 🟢 GCP Upload |
-|----------------|--------------|
-| ![Azure](./screenshots/azure.png) | ![GCP](./screenshots/gcp.png) |
-
-### 📸 Both Cloud Uploads Together  
-![Both](./screenshots/gcp-and-azure.png)
-
-📝 _Screenshots are taken from the working version of the app._
-
----
-
 ## 🔧 How It Works (Short Summary)
 
 1. You choose a file.  
