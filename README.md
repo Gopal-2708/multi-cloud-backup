@@ -56,11 +56,26 @@ multi-cloud-backup/
 .  .firebaserc
 .  database.rules.json
 
+---
+
+## 🛡️ Why It’s Called a Backup System
+
+Although the current version involves **manual file uploads**, it qualifies as a backup system because:
+
+- Files are stored in **multiple independent cloud providers** (Azure & GCP).
+- This ensures **redundancy** — if one provider fails, the file is still safe on the other.
+- The app can be extended to **automatically log uploads** using Firebase Realtime Database.
+- Future scope includes scheduling automatic backups and storing file history.
+
+This structure meets the foundational goal of **data backup: storing reliable, redundant copies**.
 
 ---
 
 ## 🙋‍♂️ Made By
 
-👨‍🎓 **Gopal Prusty**  
-🎓 Student, **Electronics and Computer Science Engineering**  
-🏫 Vidyalankar Institute of Technology
+**Gopal Prusty**  
+Student at **Vidyalankar Institute of Technology**  
+Pursuing **Electronics and Computer Science Engineering**
+
+---
+
