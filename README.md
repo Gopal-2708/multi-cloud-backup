@@ -55,6 +55,7 @@ A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azur
 ---
 
 ## 📁 Folder Structure
+
 multi-cloud-backup/
 ├── public/
 │ └── index.html # Main frontend app
