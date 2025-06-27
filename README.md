@@ -23,9 +23,9 @@ A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azur
 
 ## 🔧 How It Works (Short Summary)
 
-1. You choose a file.  
-2. The frontend (HTML/JS) uploads it directly to the cloud using secure pre-generated access links.  
-3. No backend server is needed.  
+1. You choose a file.
+2. The frontend (HTML/JS) uploads it directly to the cloud using secure pre-generated access links.
+3. No backend server is needed.
 4. Hosted entirely on Firebase 🔥
 
 ---
@@ -45,11 +45,23 @@ A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azur
 ## 📁 Folder Structure
 
 multi-cloud-backup/
+│
 ├── public/
 │ └── index.html
+│
 ├── screenshots/
-│ ├── azure.png
-│ ├── gcp.png
-│ └── gcp-and-azure.png
+│ └── (optional image files)
+│
 ├── README.md
-└── firebase.json, etc.
+├── firebase.json
+├── .firebaserc
+├── database.rules.json
+└── other Firebase setup files
+
+---
+
+## 🙋‍♂️ Made By
+
+👨‍🎓 **Gopal Prusty**  
+🎓 Student, **Electronics and Computer Science Engineering**  
+🏫 Vidyalankar Institute of Technology
