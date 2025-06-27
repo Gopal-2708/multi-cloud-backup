@@ -1,5 +1,3 @@
-# multi-cloud-backup
-A multi-cloud file backup system using AWS, Azure, GCP
 # ☁️ Multi-Cloud File Backup System
 
 A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azure Blob Storage** and **Google Cloud Storage (GCP)** — all from a simple web interface. It's fully hosted on **Firebase Hosting**, using just **HTML + JavaScript** — no backend needed!
@@ -29,15 +27,18 @@ A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azur
 |----------------|--------------|
 | ![Azure](./screenshots/azure.png) | ![GCP](./screenshots/gcp.png) |
 
+### 📸 Both Cloud Uploads Together  
+![Both](./screenshots/gcp-and-azure.png)
+
 📝 _Screenshots are taken from the working version of the app._
 
 ---
 
 ## 🔧 How It Works (Short Summary)
 
-1. You choose a file.
-2. The frontend (HTML/JS) uploads it directly to the cloud using secure pre-generated access links.
-3. No backend server is needed.
+1. You choose a file.  
+2. The frontend (HTML/JS) uploads it directly to the cloud using secure pre-generated access links.  
+3. No backend server is needed.  
 4. Hosted entirely on Firebase 🔥
 
 ---
@@ -58,10 +59,10 @@ A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azur
 
 multi-cloud-backup/
 ├── public/
-│ └── index.html # Main frontend app
-├── screenshots/ # Azure & GCP proof
+│ └── index.html
+├── screenshots/
 │ ├── azure.png
-│ └── gcp.png
-├── firebase.json # Firebase Hosting config
-├── README.md # You're here
-└── .firebaserc # Firebase project info
+│ ├── gcp.png
+│ └── gcp-and-azure.png
+├── README.md
+└── firebase.json, etc.
