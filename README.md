@@ -43,14 +43,15 @@ A ✨ beginner-friendly cloud project ✨ that lets users upload files to **Azur
 ---
 
 ## 📁 Folder Structure
-
 multi-cloud-backup/
 │
 ├── public/
 │ └── index.html
 │
 ├── screenshots/
-│ └── (optional image files)
+│ ├── Azure.png
+│ ├── Gcp.png
+│ └── Gcp and Azure.png
 │
 ├── README.md
 ├── firebase.json
