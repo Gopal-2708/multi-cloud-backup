@@ -1,0 +1,20 @@
+{
+  "name": "multi-cloud-backup",
+  "version": "1.0.0",
+  "description": "A multi-cloud file backup system using AWS, Azure, GCP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gopal-2708/multi-cloud-backup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gopal-2708/multi-cloud-backup/issues"
+  },
+  "homepage": "https://github.com/Gopal-2708/multi-cloud-backup#readme"
+}

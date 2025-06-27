@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-cloud Backup</title>
+  <style>
+    body {font-family: Arial, sans-serif; padding: 30px; background:#f0f0f0;}
+    h2   {margin-top:40px; color:#333;}
+    input,button {margin-top:10px;}
+  </style>
+</head>
+<body>
+
+  <!-- ─────────── Azure Blob upload ─────────── -->
+  <h2>Upload to Azure Blob Storage</h2>
+  <input type="file" id="azureFile" />
+  <button onclick="uploadToAzure()">Upload to Azure</button>
+
+  <!-- ─────────── GCP Storage upload ─────────── -->
+  <h2>Upload to Google Cloud Storage</h2>
+  <input type="file" id="gcpFile" />
+  <button onclick="uploadToGCP()">Upload to GCP</button>
+
+  <script>
+    /* ----------  Azure upload function  ---------- */
+    function uploadToAzure() {
+      const file = document.getElementById("azureFile").files[0];
+      if (!file) return alert("Please select a file.");
+
+      /* 1️⃣  Your Azure SAS URL (keep ONE copy, include /files) */
+      const sasBase =
+        "https://multicloudbackupprusty.blob.core.windows.net/files";
+      const sasToken =
+        "sv=2024-11-04&ss=b&srt=sco&sp=rwctfx&se=2025-06-30T02:58:59Z&st=2025-06-27T18:58:59Z&spr=https&sig=Et4NXUB2CiCLNIMpaUlIWVue4KZxO2fwtSox3STcmtE%3D";
+
+      const uploadUrl =
+        `${sasBase}/${encodeURIComponent(file.name)}?${sasToken}`;
+
+      fetch(uploadUrl, {
+        method: "PUT",
+        headers: { "x-ms-blob-type": "BlockBlob" },
+        body: file
+      })
+      .then(r => r.ok
+        ? alert("✅ File uploaded to Azure!")
+        : alert("❌ Azure upload failed. Check SAS or CORS.")
+      )
+      .catch(err => alert("❌ Azure network error: " + err));
+    }
+
+    /* ----------  GCP upload function  ---------- */
+    function uploadToGCP() {
+      const file = document.getElementById("gcpFile").files[0];
+      if (!file) return alert("Please select a file.");
+
+      /* Public PUT upload URL (bucket must allow object creation) */
+      const uploadUrl =
+        `https://storage.googleapis.com/multi-cloud-gcp-prusty/${encodeURIComponent(file.name)}`;
+
+      fetch(uploadUrl, {
+        method: "PUT",
+        headers: { "Content-Type": file.type },
+        body: file
+      })
+      .then(r => r.ok
+        ? alert("✅ File uploaded to GCP Storage!")
+        : alert("❌ GCP upload failed. Make bucket public or use signed URL.")
+      )
+      .catch(err => alert("❌ GCP network error: " + err));
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
