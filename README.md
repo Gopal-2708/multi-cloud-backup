@@ -73,9 +73,10 @@ This structure meets the foundational goal of **data backup: storing reliable, r
 
 ## 🙋‍♂️ Made By
 
-**Gopal Prusty**  
-Student at **Vidyalankar Institute of Technology**  
-Pursuing **Electronics and Computer Science Engineering**
+👨‍🎓 **Gopal Prusty**  
+🎓 Student, **Electronics and Computer Science Engineering**  
+🏫 Vidyalankar Institute of Technology
+
 
 ---
 
